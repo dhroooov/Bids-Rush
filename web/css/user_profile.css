@@ -1,0 +1,105 @@
+body {
+    background-image: url('/img/bidrush_background.png'); /* Replace with your image file name */
+    background-repeat: no-repeat;
+    background-size: cover; /* This will cover the entire area */
+    background-position: center; /* Center the image */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh + 120px);
+    margin: 0;
+    padding: 0;
+}
+
+.main-body {
+    width: 70vh;
+    margin: 20px;
+    max-width: 70vh;
+    padding: 2em;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.profile-container {
+    width: 70vh;
+    max-width: 600px;
+    margin: auto;
+    padding: 2em;
+    background: light grey;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-60px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-details .detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.user-details h2 {
+    color: black;
+    text-align: center;
+}
+
+.user-details .label, .user-details .value {
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+    color: #fff; /* White text for both labels and values */
+}
+
+.user-details .label {
+    font-weight: bold;
+    background: #000000; /* Black background for labels */
+    width: 125px;
+}
+
+.user-details .value {
+    background: #172738; /* Light blue background for values */
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-details .label:hover, .user-details .value:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+        transform: translateY(0);
+    }
+    
+    .user-details {
+        flex-direction: column;
+    }
+    
+    .profile-container:hover {
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+    }
+}
